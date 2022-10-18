@@ -2,7 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:Avalia.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:Controls="clr-namespace:Avalia.Views.Controls;assembly=Avalia"
+        xmlns:MyControls="clr-namespace:Avalia.Views.Controls;assembly=Avalia"
+        xmlns:FluentControls="using:FluentAvalonia.UI.Controls"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Avalia.Views.MainWindow"
@@ -38,12 +39,17 @@
         </Menu>
       </StackPanel>
 
-      <DockPanel Grid.Row="1">
-        <StackPanel Background="Purple" Height="25" DockPanel.Dock="Bottom" Orientation="Horizontal">
-          <TextBlock Text="Ready" Margin="5 0 0 0" VerticalAlignment="Center" FontSize="12"/>
-        </StackPanel>
-        <Controls:CodeEditor/>
-      </DockPanel>
+      <FluentControls:TabView Grid.Row="1" CloseButtonOverlayMode="OnPointerOver" IsAddTabButtonVisible="False">
+        <FluentControls:TabViewItem
+          Header="New File">
+          <DockPanel>
+            <StackPanel Background="Purple" Height="25" DockPanel.Dock="Bottom" Orientation="Horizontal">
+              <TextBlock Text="Ready" Margin="5 0 0 0" VerticalAlignment="Center" FontSize="12"/>
+            </StackPanel>
+            <MyControls:CodeEditor/>
+          </DockPanel>
+        </FluentControls:TabViewItem>
+      </FluentControls:TabView>
 
     </Grid>
   </Panel>
