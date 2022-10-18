@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Avalia.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="clr-namespace:Avalia.Views.Controls;assembly=Avalia"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalia.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Avalia"
+        ExtendClientAreaToDecorationsHint="True"
+	      ExtendClientAreaTitleBarHeightHint="30">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+  <Panel>
+    <Grid RowDefinitions="Auto,*">
+
+      <StackPanel Margin="5,5,0,5" Grid.Row="0" Orientation="Horizontal">
+        <Menu Grid.Column="0">
+          <MenuItem Header="File">
+            <MenuItem Header="New"/>
+            <MenuItem Header="New from Template"/>
+            <Separator/>
+            <MenuItem Header="Recents">
+              <MenuItem Header="File 1"/>
+              <MenuItem Header="File 2"/>
+              <MenuItem Header="File 3"/>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="Exit"/>
+          </MenuItem>
+          <MenuItem Header="Edit"/>
+          <MenuItem Header="Build"/>
+          <MenuItem Header="Options"/>
+        </Menu>
+      </StackPanel>
+
+      <DockPanel Grid.Row="1">
+        <StackPanel Background="Purple" Height="25" DockPanel.Dock="Bottom" Orientation="Horizontal">
+          <TextBlock Text="Ready" Margin="5 0 0 0" VerticalAlignment="Center" FontSize="12"/>
+        </StackPanel>
+        <Controls:CodeEditor/>
+      </DockPanel>
+
+    </Grid>
+  </Panel>
+
+</Window>
