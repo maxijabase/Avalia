@@ -1,3 +1,4 @@
+using Avalia.Interfaces;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -5,13 +6,18 @@ using System.Reactive;
 using System.Text;
 
 namespace Avalia.ViewModels;
-public class MainWindowViewModel : ViewModelBase
+public class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 {
-	public MainWindowViewModel()
+	public MainWindowViewModel(
+		IEditorManagerViewModel editorManagerViewModel,
+		IMenuViewModel menuViewModel)
 	{
+		EditorManagerViewModel = editorManagerViewModel;
+		MenuViewModel = menuViewModel;
 	}
 
-    public static void ExitCommand() => Environment.Exit(0);
+	public IEditorManagerViewModel EditorManagerViewModel { get; set; }
+	public IMenuViewModel MenuViewModel { get; set; }
 
-	public EditorManagerViewModel EditorManagerViewModel { get; set; }
+	public void ExitCommand() => Environment.Exit(0);
 }

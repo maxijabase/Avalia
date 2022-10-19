@@ -4,7 +4,7 @@
              xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Avalia.Views.Controls.CodeEditor">
+             x:Class="Avalia.Views.CodeEditorView">
 
   <AvaloniaEdit:TextEditor Name="Editor"
                                FontFamily="Cascadia Code,Consolas,Menlo,Monospace"

@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:Avalia.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:MyControls="clr-namespace:Avalia.Views.Controls;assembly=Avalia"
+        xmlns:Views="clr-namespace:Avalia.Views;assembly=Avalia"
         xmlns:FluentControls="using:FluentAvalonia.UI.Controls"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
@@ -19,29 +19,10 @@
   <Panel>
     <Grid RowDefinitions="Auto,*">
 
-      <StackPanel Margin="5,5,0,5" Grid.Row="0" Orientation="Horizontal">
-        <Menu Grid.Column="0">
-          <MenuItem Header="File">
-            <MenuItem Header="New"/>
-            <MenuItem Header="New from Template"/>
-            <Separator/>
-            <MenuItem Header="Recents">
-              <MenuItem Header="File 1"/>
-              <MenuItem Header="File 2"/>
-              <MenuItem Header="File 3"/>
-            </MenuItem>
-            <Separator/>
-            <MenuItem Header="Exit" Command="{Binding ExitCommand}"/>
-          </MenuItem>
-          <MenuItem Header="Edit"/>
-          <MenuItem Header="Build"/>
-          <MenuItem Header="Options"/>
-        </Menu>
-      </StackPanel>
+      <Views:MenuView DataContext="{Binding MenuViewModel}"/>
 
-      <MyControls:EditorManagerView Grid.Row="1" 
-                                    HorizontalAlignment="Center"
-                                    DataContext="{Binding EditorManagerViewModel}"/>
+      <Views:EditorManagerView Grid.Row="1" 
+                               DataContext="{Binding EditorManagerViewModel}"/>
 
     </Grid>
   </Panel>

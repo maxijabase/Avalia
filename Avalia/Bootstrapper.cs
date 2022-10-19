@@ -1,17 +1,22 @@
-﻿using Avalia.Backend.Interfaces;
-using Avalia.Backend.Services;
+﻿using Avalia.Extensions;
+using Avalia.Interfaces;
+using Avalia.ViewModels;
 using Splat;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Avalia;
 public static class Bootstrapper
 {
     public static void Register(IMutableDependencyResolver services, IReadonlyDependencyResolver resolver)
     {
-        services.RegisterLazySingleton<IEditorManagerService>(() => new EditorManagerService());
+        services.RegisterLazySingleton<IEditorManagerViewModel>(() => new EditorManagerViewModel());
+
+        services.RegisterLazySingleton<IMenuViewModel>(() => new MenuViewModel(
+            resolver.GetRequiredService<IEditorManagerViewModel>()    
+        ));
+
+        services.RegisterLazySingleton<IMainWindowViewModel>(() => new MainWindowViewModel(
+            resolver.GetRequiredService<IEditorManagerViewModel>(),
+            resolver.GetRequiredService<IMenuViewModel>()
+        ));
     }
 }

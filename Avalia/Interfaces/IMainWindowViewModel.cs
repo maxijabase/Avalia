@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Avalia.Backend.Interfaces;
-public interface IEditorManagerService
+namespace Avalia.Interfaces;
+public interface IMainWindowViewModel
 {
-    void TestClose();
+    void ExitCommand();
 }

@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalia.Views.MenuView">
+  <Panel>
+    <StackPanel Margin="5,5,0,5" Grid.Row="0" Orientation="Horizontal">
+      <Menu Grid.Column="0">
+        <MenuItem Header="File">
+          <MenuItem Header="New" Command="{Binding NewCommand}"/>
+          <MenuItem Header="New from Template"/>
+          <Separator/>
+          <MenuItem Header="Recents">
+            <MenuItem Header="File 1"/>
+            <MenuItem Header="File 2"/>
+            <MenuItem Header="File 3"/>
+          </MenuItem>
+          <Separator/>
+          <MenuItem Header="Exit" Command="{Binding Close}"/>
+        </MenuItem>
+        <MenuItem Header="Edit"/>
+        <MenuItem Header="Build"/>
+        <MenuItem Header="Options"/>
+      </Menu>
+    </StackPanel>
+  </Panel>
+</UserControl>
