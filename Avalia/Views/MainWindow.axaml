@@ -31,7 +31,7 @@
               <MenuItem Header="File 3"/>
             </MenuItem>
             <Separator/>
-            <MenuItem Header="Exit"/>
+            <MenuItem Header="Exit" Command="{Binding ExitCommand}"/>
           </MenuItem>
           <MenuItem Header="Edit"/>
           <MenuItem Header="Build"/>
@@ -39,17 +39,9 @@
         </Menu>
       </StackPanel>
 
-      <FluentControls:TabView Grid.Row="1" CloseButtonOverlayMode="OnPointerOver" IsAddTabButtonVisible="False">
-        <FluentControls:TabViewItem
-          Header="New File">
-          <DockPanel>
-            <StackPanel Background="Purple" Height="25" DockPanel.Dock="Bottom" Orientation="Horizontal">
-              <TextBlock Text="Ready" Margin="5 0 0 0" VerticalAlignment="Center" FontSize="12"/>
-            </StackPanel>
-            <MyControls:CodeEditor/>
-          </DockPanel>
-        </FluentControls:TabViewItem>
-      </FluentControls:TabView>
+      <MyControls:EditorManagerView Grid.Row="1" 
+                                    HorizontalAlignment="Center"
+                                    DataContext="{Binding EditorManagerViewModel}"/>
 
     </Grid>
   </Panel>

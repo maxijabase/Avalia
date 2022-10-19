@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avalia", "Avalia\Avalia.csproj", "{29F7B4FC-6665-4D81-A8FB-32046151859D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalia.Backend", "Avalia.Backend\Avalia.Backend.csproj", "{3C31D1AD-A073-4ABF-AED0-D7036F5DE2A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{29F7B4FC-6665-4D81-A8FB-32046151859D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29F7B4FC-6665-4D81-A8FB-32046151859D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29F7B4FC-6665-4D81-A8FB-32046151859D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C31D1AD-A073-4ABF-AED0-D7036F5DE2A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C31D1AD-A073-4ABF-AED0-D7036F5DE2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C31D1AD-A073-4ABF-AED0-D7036F5DE2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C31D1AD-A073-4ABF-AED0-D7036F5DE2A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
