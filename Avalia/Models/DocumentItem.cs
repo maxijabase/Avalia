@@ -10,4 +10,5 @@ public class DocumentItem
     public IconSource? IconSource { get; set; }
 
     public CodeEditorView? Content { get; set; }
+    public bool Selected { get; set; }
 }

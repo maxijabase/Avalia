@@ -1,5 +1,6 @@
 ﻿using Avalia.Interfaces;
 using Avalia.Models;
+using Avalia.Views;
 using FluentAvalonia.UI.Controls;
 using System;
 using System.Collections.Generic;
@@ -12,23 +13,26 @@ namespace Avalia.ViewModels;
 public class EditorManagerViewModel : ViewModelBase, IEditorManagerViewModel
 {
     public ObservableCollection<DocumentItem> Documents { get; set; }
-    public int index = 0;
 
     public EditorManagerViewModel()
     {
         Documents = new();
-        AddEditor();
     }
 
     public void AddEditor()
     {
+        var editor = new CodeEditorView();
+        editor.Editor.ShowLineNumbers = true;
         var doc = new DocumentItem
         {
-            Content = new(),
-            Header = $"header {index}",
-            IconSource = new SymbolIconSource { Symbol = Symbol.Code }
+            Content = editor,
+            Header = $"Document {Documents.Count}",
+            IconSource = new SymbolIconSource { Symbol = Symbol.CodeFilled },
+            Selected = true
         };
+        
         Documents.Add(doc);
-        index++;
+        editor.Editor.TextArea.Focus();
+        editor.Editor.TextArea.TextView.Focus();
     }
 }

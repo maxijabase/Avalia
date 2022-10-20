@@ -19,7 +19,8 @@
       <DataTemplate x:DataType="mod:DocumentItem">
         <ui:TabViewItem Header="{CompiledBinding Header}"
                         IconSource="{CompiledBinding IconSource}"
-                        Content="{Binding Content}" />
+                        IsSelected="{CompiledBinding Selected}"
+                        Content="{CompiledBinding Content}" />
       </DataTemplate>
     </ui:TabView.TabItemTemplate>
   </ui:TabView>
