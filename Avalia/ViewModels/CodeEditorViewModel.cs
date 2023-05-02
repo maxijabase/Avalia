@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Avalia.ViewModels;
+﻿namespace Avalia.ViewModels;
 internal class CodeEditorViewModel : ViewModelBase
 {
 

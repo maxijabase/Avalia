@@ -1,11 +1,10 @@
+using Avalia.Extensions;
+using Avalia.Interfaces;
+using Avalia.Views;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Avalia.ViewModels;
-using Avalia.Views;
-using Avalia.Interfaces;
 using Splat;
-using Avalia.Extensions;
 
 namespace Avalia;
 public partial class App : Application

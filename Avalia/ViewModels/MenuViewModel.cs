@@ -1,9 +1,5 @@
 ﻿using Avalia.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Avalia.ViewModels;
 public class MenuViewModel : ViewModelBase, IMenuViewModel

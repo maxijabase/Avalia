@@ -22,7 +22,7 @@
       <Views:MenuView Grid.Row="0"
                       DataContext="{Binding MenuViewModel}"/>
 
-      <Views:EditorManagerView Grid.Row="1" 
+      <Views:EditorManagerView Grid.Row="1"
                                DataContext="{Binding EditorManagerViewModel}"/>
 
     </Grid>

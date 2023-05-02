@@ -1,5 +1,4 @@
 ﻿using Avalia.Views;
-using AvaloniaEdit;
 using FluentAvalonia.UI.Controls;
 
 namespace Avalia.Models;
